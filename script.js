@@ -10,7 +10,9 @@ function drawCanvas() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.setTransform(1, 0, 0, 1, 0, 0);
     eval(textarea.value);
-    drawAxis();
+    drawAxis()
+	rotate()
+	;
 }
 
 function drawAxis() {
@@ -25,6 +27,7 @@ function drawAxis() {
     ctx.moveTo(canvas.width / 2, 0);
     ctx.lineTo(canvas.width / 2, canvas.height);
     ctx.stroke();
+	ctx.rotate();
     ctx.setLineDash([]);
 
 
